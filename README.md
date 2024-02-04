@@ -19,4 +19,5 @@ Currently, this repository contains the following units and modules
 * Lesson 2.6 (Singletons)
 
 
-To use this program, navigate to any of the units or lessons you would like to learn, read the markdown file (X-X.md) and then complete the kotlin practice.
+To do this training, clone the repository to your computer and create a branch titled FIRSTNAME_LASTNAME, filling in your first and last name.
+Then make your way through each lesson, reading the markdown file and completeing the exercise.
