@@ -1,15 +1,14 @@
 package Unit2.Lesson2_5
 
 /*
-- Create a data class called `UserAccount` with the following properties:
-    - `username` (String)
-    - `password` (String)
-    - `email` (String)
-    - `age` (Int)
-- Print the `toString()` of the data class
-- Create a copy of the data class with a new email address
-- Print the `toString()` of the copy
+    - Create an extension function for the `String` class called `isEmailValid` that returns a `Boolean`
+    - The function should check if the string is a valid email address
+    - You may check if it's valid however you want, as long as it does end up being valid or invalid when tested
+    - Print the result of the function with a valid and invalid email address
  */
+
+
+// Extension function goes here
 
 fun main() {
     // Place your code here
