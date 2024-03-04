@@ -15,8 +15,9 @@ Currently, this repository contains the following units and modules
 * Lesson 2.2 (Constructors)
 * Lesson 2.3 (Methods)
 * Lesson 2.4 (Inheritance and Overriding)
-* Lesson 2.5 (Data Classes)
-* Lesson 2.6 (Singletons)
+* Lesson 2.5 (Extension Functions)
+* Lesson 2.6 (Data Classes)
+* Lesson 2.7 (Singletons)
 
 
 To do this training, clone the repository to your computer and create a branch titled FIRSTNAME_LASTNAME, filling in your first and last name.
