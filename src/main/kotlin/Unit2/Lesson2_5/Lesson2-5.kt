@@ -1,15 +1,10 @@
 package Unit2.Lesson2_5
 
 /*
-    - Create an extension function for the `String` class called `isEmailValid` that returns a `Boolean`
-    - The function should check if the string is a valid email address
-    - You may check if it's valid however you want, as long as it does end up being valid or invalid when tested
-    - Print the result of the function with a valid and invalid email address
+- Create a base class of `Animal` with a property of `name` and a method of `makeNoise()`
+- Create a subclass of `Animal` called `Dog` that overrides the `makeNoise()` method to print "Woof!"
+- Create a subclass of `Animal` called `Cat` that overrides the `makeNoise()` method to print "Meow!"
+- Create instances of `Dog` and `Cat` and call their `makeNoise()` methods
  */
 
-
-// Extension function goes here
-
-fun main() {
-    // Place your code here
-}
+fun main() {}
