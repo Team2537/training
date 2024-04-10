@@ -1,4 +1,4 @@
-package Unit2.Lesson2_1
+package basics.Unit2.Lesson2_1
 
 /*
 - Create a class called `MyClass` that contains a `String` property called `myString`.

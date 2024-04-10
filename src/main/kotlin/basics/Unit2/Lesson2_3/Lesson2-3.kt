@@ -1,4 +1,4 @@
-package Unit2.Lesson2_3
+package basics.Unit2.Lesson2_3
 
 /*
 - Create a class called `Math` with a method called `add` that takes two parameters of type `Int` and returns an `Int`.

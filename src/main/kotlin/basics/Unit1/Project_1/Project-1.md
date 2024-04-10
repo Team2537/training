@@ -18,7 +18,7 @@ If you are stuck on what to create, ask a software lead for some ideas.
 ## Instructions
 
 As you should already be in a branch with your name, you can start working on your project.
-Create your project starting in the `src/main/kotlin/Unit1/Project-1` directory.
+Create your project starting in the `src/main/kotlin/basics.Unit1/Project-1` directory.
 
 Create any files you need in this directory and add them to git.
 

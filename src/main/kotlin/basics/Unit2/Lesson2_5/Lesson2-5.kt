@@ -1,4 +1,4 @@
-package Unit2.Lesson2_5
+package basics.Unit2.Lesson2_5
 
 /*
 - Create a base class of `Animal` with a property of `name` and a method of `makeNoise()`

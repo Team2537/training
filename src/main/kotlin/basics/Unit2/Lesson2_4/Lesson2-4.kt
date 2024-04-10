@@ -1,4 +1,4 @@
-package Unit2.Lesson2_4
+package basics.Unit2.Lesson2_4
 
 /*
     - Create an extension function for the `String` class called `isEmailValid` that returns a `Boolean`

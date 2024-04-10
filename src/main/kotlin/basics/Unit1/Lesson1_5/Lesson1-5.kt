@@ -1,4 +1,4 @@
-package Unit1.Lesson1_5
+package basics.Unit1.Lesson1_5
 
 /*
 Create a function that takes two integers as arguments and returns the sum of those two integers.

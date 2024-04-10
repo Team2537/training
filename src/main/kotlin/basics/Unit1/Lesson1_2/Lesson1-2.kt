@@ -1,4 +1,4 @@
-package Unit1.Lesson1_2
+package basics.Unit1.Lesson1_2
 
 fun main(){
     /*

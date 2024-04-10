@@ -1,4 +1,4 @@
-package Unit2.Lesson2_6
+package basics.Unit2.Lesson2_6
 
 /*
 - Create a singleton called `President` with the following properties:
