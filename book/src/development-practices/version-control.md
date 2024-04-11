@@ -1,4 +1,4 @@
-# Version Control
+# Version Control Standards
 Our team uses GitHub. 
 
 We have a Github Organization ([Team2537](https://github.com/Team2537)) where all of our robot code lives.
