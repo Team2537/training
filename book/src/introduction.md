@@ -7,8 +7,8 @@ We have about 12 weeks of training. Each week includes two meetings and about 4 
 
 ### Software Initialization - 1 week
 Software Expectations Presentation: https://docs.google.com/presentation/d/1Espk2Uu6jHAj8l4th3lBl5q831aF1I5vjCkCcmpk_ds/edit?usp=sharing
-Setting up your development environment (git and Github too!): *TODO*
-Introduction to our team's coding practices: *TODO*
+Setting up your development environment (git and Github too!): [Setting up your development environment](setup/setup.md)
+Introduction to our team's coding practices: [Coding Practices](development-practices/intro.md)
 
 ### Kotlin Programming - 5 weeks
 [Learning Kotlin](kotlin/kotlin.md)

@@ -18,3 +18,8 @@
     - [Inheritance](kotlin/unit-2/2-5.md)
     - [Singletons](kotlin/unit-2/2-6.md)
     - [Unit Project](kotlin/unit-2/Project-2.md)
+- [Robot Programming](robot/robot.md)
+- [Development Practices](development-practices/intro.md)
+  - [Code Practices](development-practices/code.md)
+  - [Version Control Practices](development-practices/version-control.md)
+- [Settting Up Your Development Environment](setup/setup.md)
