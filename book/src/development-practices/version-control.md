@@ -12,8 +12,8 @@ We use branches within these repositories to manage different versions of the ro
 
 ## Special Branches
 There are a few special branches that we use in our repositories:
-- `main` - This is the main branch of the repository. This is where the code that is currently running on the robot lives.
-- `dev` - This is the development branch. This is where we merge features and fix small bugs. When we are ready to deploy code to the robot, we merge the `dev` branch into the `main` branch. Code that is on the `dev` branch may not be fully tested, but should build and deploy successfully. 
+- `main` - This is the main branch of the repository. We plan to push code to this branch about weekly during the build season. This code should be fully tested and ready to deploy.
+- `dev` - This is the development branch. This is where we merge features and fix small bugs. When we are actually working on code in the workshop, changes will be done here. Code that is on the `dev` branch may not be fully tested, but should build and deploy successfully. 
 - `[competition]` - Every competition that we participate in will have a branch. This branch will be created the night before we go to competition, and should include the contents of `main` (and maybe `dev`) at that time. Over the course of the competition, we may have to make emergency changes to the code. These changes will be made on the competition branch, and then possibly merged back into `dev` when we get back to the shop. The name of the competition branch should be the name of the competition, words separated by hyphens. For example, the branch for the CHS District Severn competition is `CHS-district-severn`.
 
 ## Feature Branches
@@ -24,7 +24,7 @@ A pull request is a proposal to merge a set of changes from one branch into anot
 
 There are three types of Pull Requests that we use:
 - **Feature Pull Request** - This is a pull request that proposes to merge a feature branch into the `dev` branch. This pull request should be reviewed by at least one other team member before it is merged.
-- **Dev Pull Request** - This is a pull request that proposes to merge the `dev` branch into the `main` branch. This pull request should be reviewed by at least one other team member before it is merged. These pull requests should be merged by a Software Lead.
+- **Dev Pull Request** - This is a pull request that proposes to merge the `dev` branch into the `main` branch. These pull requests should be initialized and merged by both Software Leads. We plan to do this about weekly during the build season.
 
 Please make sure your code follows the [code practices](development-practices/code.md) before creating a pull request. If you do not follow the code practices, your code may not be merged.
 
