@@ -13,5 +13,5 @@
  * Topics: Class, Method, Constructor, Public, Private.
  */
 
-package basics.Unit1
+package basics.unit1
 

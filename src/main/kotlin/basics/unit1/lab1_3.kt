@@ -11,7 +11,7 @@
  * Topics: Functions, Arguments, Return Types, Optional Arguments.
  */
 
-package basics.Unit1
+package basics.unit1
 
 fun main() {
     // Write your code below

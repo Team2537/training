@@ -12,7 +12,7 @@
  * Topics: Val, Double, Math Operators.
  */
 
-package basics.Unit1
+package basics.unit1
 
 fun main() {
     // Write your code below

@@ -11,7 +11,7 @@
  * Topics: For Loops, If Statements, Lists.
  */
 
-package basics.Unit1
+package basics.unit1
 
 fun main(){
     // Write your code below
