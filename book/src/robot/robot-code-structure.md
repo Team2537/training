@@ -30,7 +30,6 @@ Creating a subsystem is pretty simple. You just need to create a new class that 
 hardware and methods you need. Here's an example of a `DriveSubsystem`:
 
 ```kotlin
-
 class DriveSubsystem : SubsystemBase() {
     private val leftMotor = CANSparkMax(0, MotorType.kBrushless)
     private val rightMotor = CANSparkMax(1, MotorType.kBrushless)
