@@ -160,6 +160,41 @@ val state = solenoid.get()
 // - DoubleSolenoid.Value.kOff
 ```
 
+## Controllers
+
+Controllers are devices that allow you to interact with the robot. This includes things like joysticks, gamepads, and
+other input devices. Controllers are connected to the computer running the driver station software, and the driver
+station software sends the input from the controllers to the robot over a network connection.
+
+To interact with controllers in your code, you can use the `Joystick` or `XboxController` classes. Here's an example of
+how you would use them:
+
+```kotlin
+val joystick = Joystick(0) // Create a new joystick on USB port 0
+
+val xAxis = joystick.getX() // Get the x-axis value of the joystick
+val yAxis = joystick.getY() // Get the y-axis value of the joystick
+
+val button1 = joystick.getRawButton(1) // Get the state of button 1 on the joystick
+```
+
+```kotlin
+val controller = XboxController(0) // Create a new Xbox controller on USB port 0
+
+val leftX = controller.leftX // Get the x-axis value of the left stick
+val leftY = controller.leftY // Get the y-axis value of the left stick
+
+val rightX = controller.rightX // Get the x-axis value of the right stick
+val rightY = controller.rightY // Get the y-axis value of the right stick
+
+val aButton = controller.aButton // Get the state of the A button on the controller
+```
+
+Controllers are a great way to interact with the robot and control its behavior. You can use them to drive the robot,
+control mechanisms, and trigger actions based on user input.
+
+
+
 ## Conclusion
 
 That's it for device I/O! You should now have a basic understanding of how to interact with motors, sensors, and other
