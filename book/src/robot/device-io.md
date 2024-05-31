@@ -75,6 +75,22 @@ Remember that the NEO Encoder is relative, meaning that it measures the position
 when it was turned on (or last reset). This is different from absolute encoders, which measure the position of the motor
 relative to a known starting point, that persists even when the motor is turned off.
 
+#### Conversion Factors
+
+By default the NEO Encoder measures position and velocity in Rotations and Rotations per Minute (RPM) respectively. If
+you need to convert these values to different units or scales (such as in a mechanism with a different gear ratio), you
+can modify `positionConversionFactor` and `velocityConversionFactor` like so:
+
+```kotlin
+val encoder = neoMotor.encoder
+
+// Set the conversion factor for position to convert from rotations to inches
+encoder.positionConversionFactor = 1.0 / 10.0 // 1 rotation = 10 inches (for example)
+
+// Set the conversion factor for velocity to convert from RPM to feet per second
+encoder.velocityConversionFactor = 36/24 // 36/24 Gear ratio, but still in RPM
+```
+
 ### Gyroscopes
 
 A gyroscope is a device that measures the orientation of an object. This is useful for things like driving straight,
