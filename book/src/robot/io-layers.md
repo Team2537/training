@@ -94,6 +94,52 @@ You may notice that we're not exposing any methods for reading the inputs, this 
 inputs will be created elsewhere, and when the `updateInputs` method is called, it will update the inputs with the
 current state of the hardware, so then you can read the inputs from the inputs object.
 
+### Creating Inputs out of Measures (Units Library)
+
+WPILib's java units library doesn't translate perfectly to AdvantageKit's inputs like doubles do, so let's real quick
+go over how you create your toLog and fromLog methods when using Measures.
+
+```kotlin
+interface FlywheelIO {
+    class FlywheelIOInputs : LoggableInputs {
+        var speed: MutableMeasure<Velocity<Angle>> = MutableMeasure.zero(Units.RadiansPerSecond)
+        var voltage: MutableMeasure<Voltage> = MutableMeasure.zero(Units.Volts)
+
+        // Luckily, you can just put the measure directly into the table
+        override fun toLog(table: LogTable?) {
+            table?.put("speed", speed) 
+            table?.put("voltage", voltage)
+        }
+        
+        // This is where it gets a bit more complicated
+        override fun fromLog(table: LogTable?) {
+            speed.mut_replace(table?.get("speed", speed)) // Replace the speed measure with the one from the table, or keep the old one if it can't be found
+            voltage.mut_replace(table?.get("voltage", voltage)) // Replace the voltage measure with the one from the table, or keep the old one if it can't be found
+        }
+    }
+    
+    fun updateInputs(inputs: FlywheelIOInputs)
+    fun setVoltage(voltage: Measure<Voltage>)
+}
+```
+
+Your updateInputs also looks slightly different, so lets quickly go over that as well for completeness.
+
+```kotlin
+class FlywheelIOSpeedController : FlywheelIO {
+    val motor = CANSparkMax(0, MotorType.kBrushless) // Create a new SparkMax on port 0
+    
+    override fun updateInputs(inputs: FlywheelIOInputs) {
+        inputs.speed.mut_replace(motor.encoder.velocity, Units.RPM) // Assuming the encoder is outputting RPM velocity readings
+        inputs.voltage.mut_replace(motor.appliedOutput * motor.busVoltage, Units.Volts)
+    }
+    
+    override fun setVoltage(voltage: Measure<Voltage>) {
+        motor.setVoltage(voltage.value)
+    }
+}
+```
+
 ## Conclusion
 
 IO Layers are a powerful tool for abstracting away the complexities of hardware, and making it easy to write code that
