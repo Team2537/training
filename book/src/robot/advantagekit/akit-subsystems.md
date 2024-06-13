@@ -31,13 +31,10 @@ Assume we have a DrivetrainIO interface that has methods for controlling the dri
 contains the sensor values for the drivetrain
  */
 
-class DriveSubsystem : SubsystemBase {
+class DriveSubsystem(
     val io: DrivetrainIO
+) : SubsystemBase {
     val inputs = DrivetrainIO.DrivetrainIOInputs()
-    
-    constructor(io: DrivetrainIO) {
-        this.io = io
-    }
     
     fun getDriveCommand(speed: Double, rotation: Double): Command {
         return this.run {
