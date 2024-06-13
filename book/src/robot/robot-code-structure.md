@@ -61,8 +61,8 @@ Here's an example of a simple subsystem that controls a drivetrain
 import java.util.function.DoubleSupplier
 
 class Drivetrain : Subsystem() {
-    private val leftMotor = Talon(0)
-    private val rightMotor = Talon(1)
+    private val leftMotor = CANSparkMax(0, MotorType.kBrushless)
+    private val rightMotor = CANSparkMax(1, MotorType.kBrushless)
 
     fun drive(speed: Double, rotation: Double) {
         leftMotor.set(speed + rotation)
