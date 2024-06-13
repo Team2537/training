@@ -13,6 +13,7 @@
 - [Robot Programming](robot/robot.md)
   - [Intro to WPILIB](robot/intro-to-wpilib.md)
   - [Device I/O](robot/device-io.md)
+    - [IO Layers](robot/io-layers.md)
   - [Robot Code Structure](robot/robot-code-structure.md)
   - [Open-Loop Control](robot/open-loop-control.md)
   - [Closed-Loop Control](robot/closed-loop-control.md)
