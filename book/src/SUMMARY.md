@@ -20,5 +20,6 @@
   - [Closed-Loop Control](robot/closed-loop-control.md)
 - [Development Practices](development-practices/intro.md)
   - [Code Practices](development-practices/code.md)
+    - [Documentation](development-practices/documentation.md)
   - [Version Control Practices](development-practices/version-control.md)
 - [Settting Up Your Development Environment](setup/setup.md)
