@@ -25,7 +25,7 @@ when writing code on our team.
 ### Subsystem Structure
 
 - **Properties and Methods**:
-    - Place property-based data access (e.g., `get()` methods for small pieces of info) under normal properties but
+    - Place property-based data access (e.g., `get()` methods for small pieces of info) after init blocks and constructors but
       above methods.
     - Organize methods by functionality, grouping related methods together (e.g., all driving-related methods in one
       group).
