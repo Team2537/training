@@ -22,4 +22,8 @@
   - [Code Practices](development-practices/code.md)
     - [Documentation](development-practices/documentation.md)
   - [Version Control Practices](development-practices/version-control.md)
+- [Challenges](challenges/challenges-overview.md)
+  - [Challenge 1](challenges/challenge-1.md)
+  - [Challenge 2](challenges/challenge-2.md)
+  - [Challenge 3](challenges/challenge-3.md)
 - [Settting Up Your Development Environment](setup/setup.md)

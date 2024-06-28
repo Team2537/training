@@ -53,6 +53,5 @@ when writing code on our team.
 
 # Misc Robot Code Practices
 
-- Motor Units should always be in Rotations and RPM for angular, and meters and meters per second for linear, use
+- Motor Units should always be in Rotations and Rotations per Second for angular, and Meters and Meters per Second for linear, use
   Measures to access other units.
-- 
