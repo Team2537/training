@@ -49,15 +49,27 @@ interface GripperIO { // Define the interface for the Gripper
         }
     }
 
-    fun updateInputs(inputs: GripperIOInputs) // Define a method for updating the inputs of the gripper
-    fun openGripper() // Define a method for opening the gripper
-    fun closeGripper() // Define a method for closing the gripper
+    fun updateInputs(inputs: GripperIOInputs) {} // Define a method for updating the inputs of the gripper
+    fun openGripper() {} // Define a method for opening the gripper
+    fun closeGripper() {} // Define a method for closing the gripper
 }
 ```
 
 As you can see, it's a very simple concept. You may also notice the `LoggableInputs` interface, which is a simple
 interface that defines methods for converting the inputs to and from a `LogTable`, which is a simple key-value store
-that is used for logging.
+that is used for logging. Note the curly braces after each method, this is required for the default implementation of
+the IO layer to be used for replay.
+
+### Input Classes In Depth
+
+The `Inputs` class is used to "Log" the state of the mechanism at a given point in time. This allows us to do things like
+look at the state of our code when an error occurred, or even replay a match with code changes, using the original inputs.
+
+The inputs class is comprised of 3 parts, the variables, the `toLog` method, and the `fromLog` method. The variables are
+the values that you want to log, and are the values that you will be updating in the IO layer's `updateInputs` method.
+The `toLog` method is used to convert the inputs to a `LogTable`, which is a simple key-value store that is used for
+logging the state of the mechanism to a file. The `fromLog` method is used to convert the `LogTable` back into the
+inputs, so that you can use them in your code.
 
 ### Creating the Implementation
 

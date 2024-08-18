@@ -35,4 +35,7 @@ collection, view the movies in the collection, and search for movies by title.
 Obviously this isn't strictly "graded" but you should be able to demonstrate the functionality of your program to your
 software leads, as well as an understanding of the basic concepts of Kotlin.
 
-Once you have completed the project, send a message on Slack to your software leads to review your code.
+It is recommended to use GitHub for this project, as you will need to submit it using github.
+
+Once you have completed the project, send a message on Slack to your software leads with a link to the repository
+containing your project, so we can review your code.
