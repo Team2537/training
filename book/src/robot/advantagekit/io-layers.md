@@ -71,6 +71,21 @@ The `toLog` method is used to convert the inputs to a `LogTable`, which is a sim
 logging the state of the mechanism to a file. The `fromLog` method is used to convert the `LogTable` back into the
 inputs, so that you can use them in your code.
 
+The purpose of these inputs classes is to sit in between the hardware and the control logic, and log anything that is
+***input*** into the control logic. Anything that is a ***output*** of the control logic, such as desired motor speeds,
+should not be logged in the inputs class. We will go over how to log those at a later date. Here are some examples of
+what would be inputs, and what would be outputs:
+
+| Input                                                                              | Output              |
+|------------------------------------------------------------------------------------|---------------------|
+| Anything Read From A Sensor or Device (Motor voltage, Position, Limit Switch State | Desired Motor Speed |
+| If devices are enabled or disabled                                                 | Pose of the robot   |
+| If a mechanism is holding a game piece                                             |                     |
+
+There are a lot of things that can be inputs, and a lot of things that can be outputs, but the general rule of thumb is
+that if it's something that is read from a sensor or device, it should be an input, and if it's something that is
+calculated by the control logic, it should be an output.
+
 ### Creating the Implementation
 
 Now that you've defined the interface, you need to create an implementation of the interface. Here is an example of a
