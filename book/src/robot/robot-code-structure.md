@@ -171,6 +171,62 @@ contain information on all the different methods you can use to run commands bas
 other two important ones are `whileTrue` which runs a command while a trigger is true but cancels it if its no longer
 true, and `toggleOnTrue` which runs a command when a trigger is true, but cancels it if the trigger is true again.
 
+## The Robot Class
+
+Now that we've talked about commands, and triggers, lets talk about how we use them.
+
+The `Robot` class is the main class of your robot code. It's responsible for initializing the subsystems and commands,
+as well as running the "Command Scheduler" which is the part of WPILIB that actually tracks and runs commands.
+
+The `Robot` class inherits from `TimedRobot`, this gets it a `init` and `periodic` method for each of the robot modes (
+disabled, autonomous, teleop, etc) as well as an overall `robotPeriodic` method that runs every robot loop, regardless
+of the mode. All periodic methods are run every 20ms, or 50 times a second, this is our "loop time".
+
+You may notice the lack of a `robotInit` method, this is because the constructor is just as good for initializing the
+robot, and there's no reason to not just declare all of your commands within the `Robot` object.
+
+### Binding Commands in the Robot Class
+
+The `Robot` class is where you bind commands to triggers. This is done by creating triggers and commands in the
+`Robot` class, and then binding them together using the `onTrue`, `whileTrue`, and `toggleOnTrue` methods as discussed
+earlier.
+
+You can also bind commands to triggers in the `Robot` class using the `CommandJoystick` and `CommandXboxController`,
+extensions of the `Joystick` and `XboxController` classes that have methods that return triggers directly, instead of
+booleans that you have to wrap in a trigger. This can be done cleanly using the `apply` method like when initializing
+hardware objects.
+
+Here's an example of binding a command to a button press in the `Robot` class
+
+```kotlin
+class Robot : TimedRobot() {
+    private val controller = CommandXboxController(0).apply {
+        b().onTrue(PrintCommand("Hello, World!"))
+        b().onFalse(PrintCommand("Goodbye, World!"))
+    }
+}
+```
+
+as you can see, we've created a `PrintCommand` that prints "Hello, World!" when a button is pressed, and "Goodbye,
+World!"
+when the button is released. We then bind the command to the button press using the `onTrue` method.
+
+### Setting default commands
+
+Often you will want your subsystems to have a default command that runs when no other command is running. This is done
+by setting the `defaultCommand` property of the subsystem to the command you want to run. Once again, this is done in
+the `Robot` class using the `apply` method.
+
+Here's an example of setting a default command for a subsystem in the `Robot` class
+
+```kotlin
+class Robot : TimedRobot() {
+    private val drivetrain = Drivetrain().apply {
+        defaultCommand = Drivetrain.createDriveCommand({ 0.0 }, { 0.0 })
+    }
+}
+```
+
 ## Conclusion
 
 Command Based Programming is a powerful way to structure your robot code. It makes it easy to write code that is

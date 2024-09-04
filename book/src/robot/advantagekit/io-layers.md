@@ -49,15 +49,42 @@ interface GripperIO { // Define the interface for the Gripper
         }
     }
 
-    fun updateInputs(inputs: GripperIOInputs) // Define a method for updating the inputs of the gripper
-    fun openGripper() // Define a method for opening the gripper
-    fun closeGripper() // Define a method for closing the gripper
+    fun updateInputs(inputs: GripperIOInputs) {} // Define a method for updating the inputs of the gripper
+    fun openGripper() {} // Define a method for opening the gripper
+    fun closeGripper() {} // Define a method for closing the gripper
 }
 ```
 
 As you can see, it's a very simple concept. You may also notice the `LoggableInputs` interface, which is a simple
 interface that defines methods for converting the inputs to and from a `LogTable`, which is a simple key-value store
-that is used for logging.
+that is used for logging. Note the curly braces after each method, this is required for the default implementation of
+the IO layer to be used for replay.
+
+### Input Classes In Depth
+
+The `Inputs` class is used to "Log" the state of the mechanism at a given point in time. This allows us to do things like
+look at the state of our code when an error occurred, or even replay a match with code changes, using the original inputs.
+
+The inputs class is comprised of 3 parts, the variables, the `toLog` method, and the `fromLog` method. The variables are
+the values that you want to log, and are the values that you will be updating in the IO layer's `updateInputs` method.
+The `toLog` method is used to convert the inputs to a `LogTable`, which is a simple key-value store that is used for
+logging the state of the mechanism to a file. The `fromLog` method is used to convert the `LogTable` back into the
+inputs, so that you can use them in your code.
+
+The purpose of these inputs classes is to sit in between the hardware and the control logic, and log anything that is
+***input*** into the control logic. Anything that is a ***output*** of the control logic, such as desired motor speeds,
+should not be logged in the inputs class. We will go over how to log those at a later date. Here are some examples of
+what would be inputs, and what would be outputs:
+
+| Input                                                                              | Output              |
+|------------------------------------------------------------------------------------|---------------------|
+| Anything Read From A Sensor or Device (Motor voltage, Position, Limit Switch State | Desired Motor Speed |
+| If devices are enabled or disabled                                                 | Pose of the robot   |
+| If a mechanism is holding a game piece                                             |                     |
+
+There are a lot of things that can be inputs, and a lot of things that can be outputs, but the general rule of thumb is
+that if it's something that is read from a sensor or device, it should be an input, and if it's something that is
+calculated by the control logic, it should be an output.
 
 ### Creating the Implementation
 

@@ -176,6 +176,22 @@ val state = solenoid.get()
 // - DoubleSolenoid.Value.kOff
 ```
 
+## Device Configuration with Apply
+
+When you create a device object, you can configure its settings using the `apply` function. This is a kotlin function that
+allows you to attach a block of code to an object, this makes our code cleaner and easier to read. Here's an example:
+
+```kotlin
+val neoMotor = CANSparkMax(0, MotorType.kBrushless).apply {
+    idleMode = IdleMode.kBrake
+    setSmartCurrentLimit(40)
+    setInverted(false)
+}
+```
+
+As you can see you do not need `this` or `neoMotor` to access the object, you can just use the properties and methods
+directly.
+
 ## Controllers
 
 Controllers are devices that allow you to interact with the robot. This includes things like joysticks, gamepads, and
