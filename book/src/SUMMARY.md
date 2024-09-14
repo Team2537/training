@@ -3,6 +3,7 @@
 [Introduction](introduction.md)
 
 - [Kotlin](kotlin/kotlin.md)
+  - [How to do labs](kotlin/how-to-lab.md)
   - [Unit 1](kotlin/unit-1/1-0.md)
     - [Variables & Operators](kotlin/unit-1/1-1.md)
     - [Logic & Loops](kotlin/unit-1/1-2.md)
