@@ -39,10 +39,7 @@ The first part of Command Based Programming is Subsystems. Subsystems are classe
 like the drivetrain, or an arm mechanism. They contain the hardware objects that control that part of the robot, like
 motors, sensors, and solenoids.
 
-Subsystems in 2025 may be called "Resources" instead of "Subsystems" to better reflect their purpose. This is because
-they represent a resource that is being controlled by the robot code, and their job is to store the state of a part of
-the bot, and limit access to that state, both in how it can be modified, and making sure only one part of the code can
-modify it at a time.
+Subsystems are intended to be used to store information (state) of a subsystem, as well as control access to the hardware to make sure that it is always only being given one command, and always being controlled in specific "allowed" ways.
 
 Subsystems typically contain three parts
 
