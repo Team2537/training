@@ -143,3 +143,7 @@ In this example, the `VisionSubsystem` class contains an instance of a `VisionIO
 of vision target poses using the `Logger.recordOutput` method.
 
 ## Conclusion
+
+AdvantageKit is a very powerful library that allows you to easily test different combinations of hardware on your robot. The ability to create a subsystem decoupled from its hardware is incredibly powerful for things like simulation and logging in a very controlled manner.
+
+The AdvantageKit GitHub repository has a ton of example projects and resources if you would like to look more into this, you can find this [HERE](https://github.com/Mechanical-Advantage/AdvantageKit)
