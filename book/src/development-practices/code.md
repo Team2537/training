@@ -53,5 +53,5 @@ when writing code on our team.
 
 # Misc Robot Code Practices
 
-- Motor Units should always be in Rotations and Rotations per Second, use conversions and
+- Motor Units should always be in the native units of the motor controller, use conversions and
 Measures to access other units IN CODE not on the motor controller.
