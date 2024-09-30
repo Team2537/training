@@ -78,17 +78,18 @@ relative to a known starting point, that persists even when the motor is turned 
 #### Conversion Factors
 
 By default the NEO Encoder measures position and velocity in Rotations and Rotations per Minute (RPM) respectively. If
-you need to convert these values to different units or scales (such as in a mechanism with a different gear ratio), you
-can modify `positionConversionFactor` and `velocityConversionFactor` like so:
+you need to convert these values to different  scales, like when there's a gear ratio involved, you can modify `positionConversionFactor` and `velocityConversionFactor` fields on the encoder object. 
+
+The formula is `rotor * conversionFactor`, this means your conversion factors should always be `1/gearRatio`, like so:
 
 ```kotlin
 val encoder = neoMotor.encoder
 
-// Set the conversion factor for position to convert from rotations to inches
-encoder.positionConversionFactor = 1.0 / 10.0 // 1 rotation = 10 inches (for example)
+// Set the conversion factor for position when using a 10:1 gear ratio
+encoder.positionConversionFactor = 1.0 / 10.0 
 
-// Set the conversion factor for velocity to convert from RPM to feet per second
-encoder.velocityConversionFactor = 36/24 // 36/24 Gear ratio, but still in RPM
+// Set the conversion factor for velocity for a 150:7 gear ratio
+encoder.velocityConversionFactor = 1.0/(150/7)
 ```
 
 ### Gyroscopes
