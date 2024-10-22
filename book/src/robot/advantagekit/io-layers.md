@@ -1,4 +1,4 @@
-# IO Layers (Ignore)
+# IO Layers
 
 IO Layers are a fundamental concept when using the `AdvantageKit` library. `AdvantageKit` is primarily used to provide
 abstract interfaces for controlling groups of hardware, which can then be used to easily log and simulate said hardware.
