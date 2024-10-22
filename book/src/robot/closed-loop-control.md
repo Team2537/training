@@ -118,8 +118,8 @@ the `SimpleMotorFeedforward` class, and add it to the `setReference()` function.
 arbitrary feedforward to volts, as the SparkMax expects the output of the feedforward to be in volts.
 
 Unfortunately, the SparkMax's feedforward capabilities are limited, and require you to calculate the feedforward output
-on the RoboRIO, which also provides issues for some other types of control, but those aren't super important for you to
-know as a rookie.
+on the RoboRIO, which means that we're limited in how fast we can run the feedforward loop.
+
 
 #### What unit is K_p in?
 
