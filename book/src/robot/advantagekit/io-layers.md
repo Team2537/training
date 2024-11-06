@@ -162,7 +162,7 @@ class FlywheelIOSpeedController : FlywheelIO {
     }
     
     override fun setVoltage(voltage: Measure<Voltage>) {
-        motor.setVoltage(voltage.value)
+        motor.setVoltage(voltage into Units.Volts)
     }
 }
 ```
