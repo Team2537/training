@@ -141,6 +141,7 @@ The information below covers PID control, which is a more advanced form of Close
 basic parts of our robot, but if you want to be more involved in the complex and interesting parts of our robot, it is
 definitely worth looking into.
 
-- [PID Control WPILib Docs](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/introduction-to-pid.html#introduction-to-pid)
-- [Combining Feedforward and PID Control](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/controllers/combining-feedforward-feedback.html)
-- [MatLab PID Video](https://www.mathworks.com/videos/understanding-pid-control-part-1-what-is-pid-control--1527089264373.html)
+- [PID Control WPILib Docs](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/introduction-to-pid.html#introduction-to-pid) - Comprehensive introduction to PID control concepts, including detailed explanations of proportional, integral, and derivative terms with practical examples of their effects on system behavior.
+- [Combining Feedforward and PID Control](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/controllers/combining-feedforward-feedback.html) - Explains how to effectively combine feedforward and PID control for better system performance, with examples showing how each component contributes to the final control output.
+- [MatLab PID Video](https://www.mathworks.com/videos/understanding-pid-control-part-1-what-is-pid-control--1527089264373.html) - Visual introduction to PID control using animated examples and real-world applications, making complex control concepts more approachable and intuitive.
+- [WPILib's Flywheel Tuning Guide](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/tuning-flywheel.html) - Provides interactive simulations demonstrating different control strategies (bang-bang, feedforward, PID, and combined feedforward-PID) for tuning a flywheel velocity controller. The visual simulations make it easy to understand how different control parameters affect system behavior.
