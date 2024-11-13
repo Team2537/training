@@ -19,4 +19,3 @@ set angles.
 As you can see the criteria is very simple, but there are MANY things that could be done to improve the robot's
 usability and performance. This is where your creativity and problem-solving skills come in. Good luck!
 
-### Project Template: [Challenge 1 Template](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
